@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS devtek_db;
+
+CREATE DATABASE devtek_db;
