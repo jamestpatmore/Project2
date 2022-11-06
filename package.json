@@ -12,6 +12,6 @@
     "express-session": "^1.17.3",
     "masonry-layout": "^4.2.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.25.3"
+    "sequelize": "^6.25.4"
   }
 }

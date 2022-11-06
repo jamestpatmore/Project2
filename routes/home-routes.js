@@ -3,7 +3,7 @@ const router = require('express').Router();
 // GET homepage
 router.get('/', async (req, res) => {
   try {
-    
+    res.send('Hello World')
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -16,7 +16,7 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-  res.render('login');
+  res.send('login');
 });
 
 module.exports = router;
