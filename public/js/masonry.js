@@ -3,6 +3,6 @@ window.onload = () => {
 
     const msnry = new Masonry(grid, {
         itemSelector: '.grid-item',
-        columnWidth: 80
+        columnWidth: 10
     });
 }
