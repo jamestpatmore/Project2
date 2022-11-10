@@ -34,9 +34,7 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/blog', async (req, res) => {
-  res.render('blog');
-});
+router.get('/blog', (req, res) => res.render('blog'));
 
 router.get('/signup', (req, res) => res.render('signup'));
 
