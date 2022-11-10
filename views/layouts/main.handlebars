@@ -3,8 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="https://image.ibb.co/fOur3b/favicon.png"/>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/public/css/main.css">
     <meta name="theme-color" content="#1885ed">
     <title>Homepage</title>
     </head>
@@ -38,7 +37,9 @@
             <li class="header__el"><a href="#" class="header__link">Community</a></li>
             <li class="header__el"><a href="#" class="header__link">Blog</a></li>
             <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
-            <li class="header__el header__el--blue"><a href="./login.html" class="btn btn--white">Sign In →</a></li>
+            {{#if logged_in}}
+            <li class="header__el header__el--blue"><a href="/login" id="logout" class="btn btn--white">Log Out→</a></li>
+            {{/if}}
         </ul>
         </nav>
     </div>
@@ -47,7 +48,6 @@
     <main>
         {{{body}}}
     </main>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-    <script type="module" src="/js/masonry.js"></script>
+    <script src="/utils/index.js"></script>
 </body>
 </html>
