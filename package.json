@@ -20,7 +20,8 @@
     "jquery": "^3.6.1",
     "masonry-layout": "^4.2.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.25.5"
+    "sequelize": "^6.25.5",
+    "webkit": "^0.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.grid {
+  margin: auto;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.resize {
+  width: auto;
+  height: 200px; 
+  float: left;
+  border-radius: var(--spacing-l);
+  padding: 5px; 
+  z-index: 1;
+}
+.details {
+  position: absolute;
+  z-index: 3;
+  width: auto;
+  height: auto;
+  top: 0;
+  background-color: #FCF8F4;
+  border-radius: var(--spacing-l);
+  box-sizing: border-box;
+  filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.4));
+  transform: rotate(0deg) translate(0, 0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+h2 {
+  margin-top: 3px;
+  text-align: left;
+  color: var(--text-lighter);
+}
+ul {
+  list-style-type: none;
+}
+.username {
+color: var(--text-light)
+}
+.blog-info {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  z-index: 2;
+  box-sizing: content-box;
+  width: 100%;
+}
+.resize:hover {
+  transform: scale(1.1) translateZ(0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+.resize:hover + .hide {
+  display: block;
+}
+.hide {
+  display: none;
+}
