@@ -5,17 +5,15 @@ const withAuth = require('../utils/auth');
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findOne({
-      where: {
-        email: req.body.email,
-      }
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['name', 'ASC']],
     });
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const users = userData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
-      userData,
-      message: 'hey im here',
+      users,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
     });
@@ -34,4 +32,13 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/signup', (req, res) => res.render('signup'));
+
+router.get('/homepage', (req, res) => res.render('homepage'));
+
+router.get('/contact', (req, res) => res.render('contact'));
+
+
 module.exports = router;
+
+

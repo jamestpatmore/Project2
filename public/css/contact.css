@@ -1,0 +1,7 @@
+.form-control, 
+textarea {
+  width: 300px;
+  background-color: rgb(255, 250, 250);
+  color: #fff;
+  letter-spacing: 1px;
+}
