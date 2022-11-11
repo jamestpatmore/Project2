@@ -3,9 +3,8 @@
 
 .grid {
   margin: auto;
-  width: 80%;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 .grid:after {
   content: '';
@@ -13,54 +12,58 @@
   clear: both;
 }
 .resize {
-  width: auto;
-  height: 200px; 
+  width: 290px;
+  height: auto; 
   float: left;
   border-radius: var(--spacing-l);
   padding: 5px; 
-  z-index: 1;
 }
 .details {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   width: auto;
   height: auto;
   top: 0;
-  background-color: #FCF8F4;
+  background-color: black;
   border-radius: var(--spacing-l);
   box-sizing: border-box;
-  filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.4));
-  transform: rotate(0deg) translate(0, 0);
-  transition-property: transform;
-  transition-duration: .3s;
 }
 h2 {
   margin-top: 3px;
   text-align: left;
-  color: var(--text-lighter);
+  color: var(--text-lighter) !important;
 }
 ul {
   list-style-type: none;
 }
 .username {
-color: var(--text-light)
+  color: var(--text-light) !important;
 }
 .blog-info {
   position: absolute;
-  bottom: 8px;
-  left: 16px;
-  z-index: 2;
-  box-sizing: content-box;
+  bottom: 4px;
+  z-index: 4;
   width: 100%;
+  background-color: rgba(41, 41, 41, 0.5);
+  width: 280px;
+  padding: 12px;
+  padding-top: 0px;
+  border-radius: 0px 0px 15px 15px;
+  opacity: 0;
+  right: 5px;
 }
-.resize:hover {
-  transform: scale(1.1) translateZ(0);
+.grid-item:hover .resize {
+  transform: scale(1.05) translateZ(0);
   transition-property: transform;
   transition-duration: .3s;
+  z-index: 7;
 }
-.resize:hover + .hide {
-  display: block;
+.grid-item:hover .blog-info {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .3s;
 }
-.hide {
-  display: none;
+.grid-item {
+  z-index: 0;
+  margin-bottom: 10px;
 }
