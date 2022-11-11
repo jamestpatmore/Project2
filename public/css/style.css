@@ -1,5 +1,5 @@
 .grid {
-  max-width: 80%;
+  margin: auto;
   justify-content: center;
   align-items: center;
 }
@@ -12,6 +12,6 @@
   width: 200px;
   height: auto; 
   float: left;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 5px; 
 }
