@@ -1,5 +1,5 @@
 const router = require('express').Router();
-//const PoolCluster = require('mysql2/typings/mysql/lib/PoolCluster');
+const path = require('path');
 const { User, Product } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -35,6 +35,11 @@ router.get('/login', (req, res) => {
     layout: 'login'
   });
 });
+
+router.get('/test', (req, res) => res.render('test'))
+
+router.get('/blog', (req, res) => res.render('blog'));
+
 
 router.get('/signup', (req, res) => res.render('signup', {
   layout: 'login'
@@ -86,6 +91,7 @@ router.get('/product/:id', async (req, res) => {
     res.status(500).json(err);
   }
 })
+
 
 
 module.exports = router;
