@@ -121,3 +121,4 @@ ul {
 .vote__count {
   color: var(--text-lighter)
 }
+/* TODO: add upvote and down vote on click color changes*/

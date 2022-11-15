@@ -9,6 +9,8 @@ window.onload = () => {
         isFitWidth: true
     });
 }
-// Voting system
+// Keep track of rating
 
-// Upload
+// Upload functionality
+// Using image URLs to save on server space
+
