@@ -21,6 +21,7 @@
     "masonry-layout": "^4.2.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.5",
+    "sequelize-file": "^0.0.2",
     "webkit": "^0.0.0"
   },
   "devDependencies": {
