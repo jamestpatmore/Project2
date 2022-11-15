@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../models');
+//const PoolCluster = require('mysql2/typings/mysql/lib/PoolCluster');
+const { User, Product } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -24,19 +25,67 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
+  
   if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    layout: 'login'
+  });
 });
 
-router.get('/signup', (req, res) => res.render('signup'));
+router.get('/signup', (req, res) => res.render('signup', {
+  layout: 'login'
+}));
 
 router.get('/homepage', (req, res) => res.render('homepage'));
 
 router.get('/contact', (req, res) => res.render('contact'));
+
+router.get('/shop', (req, res) => res.render('shop'));
+
+router.get('/pc', (req, res) => res.render('pc', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/keyboard', (req, res) => res.render('keyboard', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/chairs', (req, res) => res.render('chairs', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/accesories', (req, res) => res.render('accesories', {
+  logged_in: req.session.logged_in,
+  layout: 'category'
+}));
+
+router.get('/product/:id', async (req, res) => {
+  try {
+    const productData = await Product.findOne({
+      where: {
+        id: req.params.id,
+      }
+    });
+    console.log(productData);
+    const product = productData.get({ plain: true });
+
+    res.render('product', {
+      ...product,
+      //spreading the contents of product based off of the id from the seeded data etc...
+      logged_in: req.session.logged_in,
+      layout: 'secondary'
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 
 module.exports = router;
