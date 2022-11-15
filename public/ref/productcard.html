@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/public/css/productcard.css">
+<meta name="theme-color" content="#1885ed">
+<title>Homepage</title>
+</head>
+<header class="header">
+<div class="container header__container">
+<div class="header__logo"><img class="header__img" src="/public/images/devteklogo.jpeg" width="40" height="30"> <h1 class="header__title">Dev<span class="header__light">Tek</span></h1></div> 
+
+
+<div class="navbar-menu" id="navbarMenuHeroC">
+<!--
+need to enable the burger menu for mobile responsivness
+-->
+
+    <a 
+    role="button" 
+    class="navbar-burger" 
+    data-target="navbar"
+    aria-label="menu"
+    aria-expanded="false"
+    >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <nav id="navbar" class="header__nav collapse">
+    <ul class="header__elenco">
+        <li class="header__el"><a href="#" class="header__link">Home</a></li>
+        <li class="header__el"><a href="#" class="header__link">Shop</a></li>
+        <li class="header__el"><a href="#" class="header__link">Community</a></li>
+        <li class="header__el"><a href="#" class="header__link">Blog</a></li>
+        <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
+        <li class="header__el header__el--blue"><a href="./login.html" class="btn btn--white">Sign In →</a></li>
+    </ul>
+    </nav>
+</div>
+    </div>
+</header>
+
+    <body>
+        <section class="product-slider">
+            <img src="https://hackaday.com/wp-content/uploads/2016/06/xss_main.jpg" class="logo" />
+            <div class="card">
+              <div class="panel-1"></div>
+              <div class="panel-2"></div>
+              <div class="product">
+                <div class="product-image">
+                  <img src="https://www.mechanical-keyboard.org/wp-content/uploads/2021/03/Razer-Pro-Type-Wireless-Keyboard.jpg" alt="product"/>
+                </div>
+                  <div class="product-details">
+                    <div>
+                      <h1 class="product-name">Alienware Aurora R13</h1>
+                      <h1 class="price">
+                        $<span class="product-price">1.899</span>,<sup>99</sup>
+                      </h1>
+                      <div class="specs">
+                        <div class="progress-bar">
+                          <div class="progress-circle">
+                            <div class="progress-content">
+                              <h2 class="progText">80</h2>
+                              <small><b>Rating</b></small>
+                            </div>
+                            <div class="progress"></div>
+                          </div>
+                        </div>
+                        <p>
+                            Alienware’s first Cryo-Tech™ enabled desktop—with 12th Gen Intel® Core™ processors, a new chassis, improved thermal performance and quieter acoustics.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="buttons">
+                      <button type="button" class="btn-primary">
+                        <i class="fas fa-heart"></i>
+                        </br>
+                        Add To Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+        
+        <script src="/public/js/productcard.js"></script>
+      
+      </body>
+</html>
+    
