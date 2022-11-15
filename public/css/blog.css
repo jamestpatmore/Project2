@@ -61,7 +61,7 @@ ul {
 .grid-item:hover .blog-info {
   opacity: 1;
   transition-property: opacity;
-  transition-duration: .3s;
+  transition-duration: .6s;
 }
 .grid-item {
   z-index: 0;
