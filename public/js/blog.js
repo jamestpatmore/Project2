@@ -1,3 +1,4 @@
+// Masonry
 window.onload = () => {
     const grid = document.querySelector('.grid');
 
@@ -8,3 +9,6 @@ window.onload = () => {
         isFitWidth: true
     });
 }
+// Voting system
+
+// Upload

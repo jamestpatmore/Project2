@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+:root {
+  --discreetbg: rgba(41, 41, 41, 0.5)
+}
+
 .grid {
   margin: auto;
   justify-content: center;
@@ -44,7 +48,7 @@ ul {
   bottom: 4px;
   z-index: 4;
   width: 100%;
-  background-color: rgba(41, 41, 41, 0.5);
+  background-color: var(--discreetbg);
   width: 280px;
   padding: 12px;
   padding-top: 0px;
@@ -66,4 +70,54 @@ ul {
 .grid-item {
   z-index: 0;
   margin-bottom: 10px;
+}
+.upload {
+  background-color: var(--discreetbg);
+  width: 290px;
+  height: 290px;
+}
+.upload__button {
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.upload__button:hover {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.5) translateZ(0);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+.downvote {
+  background-color: rgba(41, 41, 41, 0);
+  width: 0px;
+  height: 0px;
+  border: 10px solid black;
+  border-top-color: red;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  z-index: 5;
+  border-radius: 5px;
+}
+.upvote {
+  background-color: rgba(41, 41, 41, 0);
+  width: 0px;
+  height: 0px;
+  border: 10px solid black;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: green;
+  border-left-color: transparent;
+  z-index: 5;
+  border-radius: 5px;
+}
+.polls {
+  position: absolute;
+  left: 255px;
+  bottom: 2px;
+  text-align: center;
+  text-justify: center;
+}
+.vote__count {
+  color: var(--text-lighter)
 }

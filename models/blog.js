@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection');
-const sequelizeFile = require('sequelize-file')
 
 class Blog extends Model {
     checkPass(loginPass) {
@@ -22,9 +21,19 @@ Blog.init(
             allowNull: false
         },
         picture: {
-            
-        }
+            type: DataTypes.STRING(1000),
+            allowNull: false
+        },
+        rating: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
     },
     sequelize,
-    sequelizeFile
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'blog'
+}
 )
+
+module.exports = Blog;
