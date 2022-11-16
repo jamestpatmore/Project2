@@ -1,11 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
+const User = require('./user');
 const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection');
 
 class Blog extends Model {
-    checkPass(loginPass) {
-        return bcrypt.compareSync(loginPass, this.password)
-    }
 }
 
 Blog.init(
@@ -30,7 +28,7 @@ Blog.init(
         },
         rating: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
         }
     },
     {
