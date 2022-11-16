@@ -39,6 +39,14 @@ router.get('/login', (req, res) => {
 
 router.get('/test', (req, res) => res.render('test'))
 
+
+router.get('/blog', (req, res) => res.render('blog'));
+
+router.get('/blogcheck', (req, res) => res.render('blogcheck', {
+  layout: 'login'
+}));
+
+
 router.get('/signup', (req, res) => res.render('signup', {
   layout: 'login'
 }));
@@ -99,7 +107,6 @@ router.get('/product/:id', async (req, res) => {
     res.status(500).json(err);
   }
 })
-router.get('/blog', (req, res) =>  res.render('blog'))
 
 
 module.exports = router;
