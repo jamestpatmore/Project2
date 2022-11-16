@@ -1,6 +1,8 @@
+
 const { Model, DataTypes } = require('sequelize');
 //const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection');
+const User = require('./user');
 
 class Blog extends Model {
 }
@@ -17,7 +19,7 @@ Blog.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        username: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -28,7 +30,7 @@ Blog.init(
         rating: {
             type: DataTypes.INTEGER,
             allowNull: false,
-        }
+        },
     },
     {
     sequelize,

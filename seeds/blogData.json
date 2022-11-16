@@ -1,7 +1,4 @@
-
-const Blog = require('../models/blog')
-
-const blogData = [
+[
     {
         "name": "techmech84",
         "title": "Rate my set up!",
@@ -82,7 +79,3 @@ const blogData = [
     }
     
 ]
-
-const seedBlogs = () => Blog.bulkCreate(blogData);
-
-module.exports = seedBlogs;
