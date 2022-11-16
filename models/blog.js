@@ -17,20 +17,28 @@ Blog.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         picture: {
             type: DataTypes.STRING(1000),
-            allowNull: false
+            allowNull: false,
         },
         rating: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
+        }
     },
+    {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'blog'
-}
+    }
 )
 
+
 module.exports = Blog;
+

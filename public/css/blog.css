@@ -92,7 +92,7 @@ ul {
   width: 0px;
   height: 0px;
   border: 10px solid black;
-  border-top-color: red;
+  border-top-color: var(--text-lighter);
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -106,7 +106,7 @@ ul {
   border: 10px solid black;
   border-top-color: transparent;
   border-right-color: transparent;
-  border-bottom-color: green;
+  border-bottom-color: var(--text-lighter);
   border-left-color: transparent;
   z-index: 5;
   border-radius: 5px;
@@ -121,3 +121,19 @@ ul {
 .vote__count {
   color: var(--text-lighter)
 }
+.hide {
+  display: none;
+}
+.center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;   
+}
+.upvote-active{
+  border-bottom-color: green;
+}
+.downvote-active {
+  border-top-color: red;
+}
+/* TODO: add upvote and down vote on click color changes*/

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 const { User, Product } = require('../models');
+const Blog = require('../models/blog')
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -37,6 +38,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/test', (req, res) => res.render('test'))
+
 
 router.get('/blog', (req, res) => res.render('blog'));
 
@@ -105,7 +107,6 @@ router.get('/product/:id', async (req, res) => {
     res.status(500).json(err);
   }
 })
-
 
 
 module.exports = router;
