@@ -14,7 +14,7 @@ const up = document.getElementById("up");
 const down = document.getElementById("down");
 const poll = document.getElementById("poll");
 
-let count = 0;
+let count = poll.innerHTML;
 
 voter();
 
@@ -53,5 +53,3 @@ down.addEventListener("click", ()=>{
 function voter(){
     poll.innerHTML = count;
 }
-// Upload functionality
-// Using image URLs to save on server space
