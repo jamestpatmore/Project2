@@ -51,6 +51,16 @@ router.get('/contact', (req, res) => res.render('contact'));
 
 router.get('/shop', (req, res) => res.render('shop'));
 
+router.get('/blogcreate', (req, res) => res.render('blogcreate', {
+  logged_in: req.session.logged_in,
+  layout: 'newblog'
+}));
+
+router.get('/community', (req, res) => res.render('community', {
+  logged_in: req.session.logged_in,
+  layout: 'commune'
+}));
+
 router.get('/pc', (req, res) => res.render('pc', {
   logged_in: req.session.logged_in,
   layout: 'category'
