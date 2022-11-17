@@ -1,4 +1,4 @@
-# Project2
+# Project2 DevTek (MVC Model) :space_invader:
 
 
 ![javascript](https://img.shields.io/badge/Javascript-yellow)
@@ -9,11 +9,11 @@
 ![dotenv](https://img.shields.io/badge/dotenv-green)
 
 ## Description 
-DevTek an ECOMM MVC application (utilizing handlebars.js) with social media/blog adaption for the ultimate developer community. Account creation and storage is also a huge factor to get this savvy app running properly. Sleek design and a modern approach to the ever-growing tech empire.
+DevTek an ECOMM MVC application (utilizing handlebars.js) with social media/blog adaption for the ultimate developer community. Account creation and storage is also a huge factor to get this savvy app running properly. Sleek design and a modern approach to the ever-growing tech empire. :robot:
 
 ## Usage 
 Instructions will be shown below for npm installation methods....However if youd like to use it with a GUI CLI app creator such as Heroku 
-Visit the app [here](https://agile-sea-60043.herokuapp.com)
+Visit the app [here](https://agile-sea-60043.herokuapp.com) :alien:
 
 ## User Story 
 ```md 
@@ -24,31 +24,31 @@ WHILE having a retail aspect within the application as well.
 ```
 
 ## Screenshots
-As a new user You get to create a profile!!!
+As a new user You get to create a profile!!! :dizzy:
 
 ![signup page](./public/images/signupscreenshot.png)
 
-Then you get directed after you login to the hompage :)
+Then you get directed after you login to the hompage :nerd_face:
 
 ![homepage](./public/images/homepagescreenshot.png)
 
-Here is our PC section within the application. SHowcasing the latest and greatest 
+Here is our PC section within the application. SHowcasing the latest and greatest :computer:
 
 ![pc page](./public/images/pcscreenshot.png)
 
-If you click on the product it takes you to
+If you click on the product it takes you to... :package:
 
 ![product](./public/images/productscreenshot.png)
 
-Here is the blog section of the application 
+Here is the blog section of the application :envelope_with_arrow:
 
 ![blog](./public/images/blogscreenshot.png)
 
-Where you also have the ability to submit a blog!!
+Where you also have the ability to submit a blog!! :outbox_tray:
 
 ![blogsubmit](./public/images/blogsubmitscreenshot.png)
 
-Just wanted to showcase some of the functionalities and aestheics! Use the application to dive deeper
+Just wanted to showcase some of the functionalities and aestheics! Use the application to dive deeper :test_tube:
 
 
 
