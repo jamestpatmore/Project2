@@ -87,7 +87,7 @@ Masonry
 npm install masonary-layout 
 ```
 
-##Future Development 
+## Future Development 
 This application is amazing and we feel accomplished to be able to get it to this level within 2 weeks. However there are some components that will be a work in progress. 
 
 Stay tuned for updates as I’ll be adding onto this project for my portfolio 
