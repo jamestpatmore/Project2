@@ -74,7 +74,7 @@ npm i dotenv
 ```
 
 Sequelize
-``md
+```md
 npm i sequelize
 ```
 
